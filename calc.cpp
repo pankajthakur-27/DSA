@@ -1,13 +1,19 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 int main(){
     int a,b;
     char op;
     char choice;
 
+    int n;
+
+    cout<<"enter a number :-";
+    cin>>n;
+
     cout<<"enter two number ";
     cin>>a>>b;
-    cout<<"enter your required operator ('+','-','*','/') : ";
+    cout<<"enter your required operator ('+','-','*','/','r = square_root' , 's=square' ) : ";
     cin>>op;
 
     switch (op){
@@ -26,6 +32,11 @@ int main(){
         else;
         cout<<"division error";
         break;
+        case 'r':
+        cout<<"square_root of number := "<<sqrt(n);
+        break;
+        case 's':
+        cout<<"enter number to find squre root : ="<<n*n;
 
         default :
         cout<<"invalid operator";
