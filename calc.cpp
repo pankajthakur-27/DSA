@@ -8,8 +8,10 @@ int main(){
 
     int n;
 
-    cout<<"enter a number :-";
-    cin>>n;
+    do{
+        cout<<"enter a number :-";
+
+        cin>>n;
 
     cout<<"enter two number ";
     cin>>a>>b;
@@ -29,7 +31,7 @@ int main(){
         case '/':
         if (b!=0)
         cout<<"result as : ="<<a/b;
-        else;
+        else
         cout<<"division error";
         break;
         case 'r':
@@ -37,15 +39,17 @@ int main(){
         break;
         case 's':
         cout<<"enter number to find squre root : ="<<n*n;
+        break;
 
         default :
         cout<<"invalid operator";
     }
-        cout<<"Do you wnmat to continue : (y/n)";
+        cout<<"Do you want to continue : (y/n)";
         cin>>choice;
 
-    
-    while ( choice == 'y' || choice == 'Y')
+}
+    while ( choice == 'y' || choice == 'Y');
+
     return 0;
 
 }
