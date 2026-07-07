@@ -1,0 +1,38 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+
+    int n,x;
+    cout<<"enter no.  of elemnets :-";
+    cin>>n;
+
+    vector<int>v;
+
+    for(int i=0 ;i<n ;i++){
+        cin>>x;
+        v.push_back(x);
+    }
+
+    for(int i=0 ;i<v.size();i++){
+        cout<<v[i]<<endl;
+    }
+
+    int g;
+    cout<<"g is targeted diffrence of two pairs :- ";
+    cin>>g;
+    int count=0;
+
+    for(int i=0 ; i<v.size();i++){
+        for(int j=i+1 ; j<v.size();j++){
+            if(abs(v[i]-v[j])==g){
+            cout<<v[i]<<","<<v[j]<<endl;
+            count++;
+        }
+        
+        }
+    }
+    cout<<"count is:- "<<endl;
+    cout<<count;
+    return 0;
+}
